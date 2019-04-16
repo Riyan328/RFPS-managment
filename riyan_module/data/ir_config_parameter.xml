@@ -1,0 +1,45 @@
+<?xml version = "1.0"?>
+<odoo>
+	<data noupdate = "0">
+		<record id = "gits_system_name" model = "ir.config_parameter">
+			<field name = "key">gits_system_name</field>
+			<field name = "value">GITSapp</field>
+		</record>
+
+		<record id = "gits_show_documentation" model = "ir.config_parameter">
+			<field name = "key">gits_show_documentation</field>
+			<field name = "value">True</field>
+		</record>
+
+		<record id = "gits_show_support" model = "ir.config_parameter">
+			<field name = "key">gits_show_support</field>
+			<field name = "value">True</field>
+		</record>
+
+		<record id = "gits_show_account" model = "ir.config_parameter">
+			<field name = "key">gits_show_account</field>
+			<field name = "value">True</field>
+		</record>
+
+		<record id = "gits_documentation_url" model = "ir.config_parameter">
+			<field name = "key">gits_documentation_url</field>
+			<field name = "value">http://www.greenit.com.np</field>
+		</record>
+
+		<record id = "gits_support_url" model = "ir.config_parameter">
+			<field name = "key">gits_support_url</field>
+			<field name = "value">http://www.greenit.com.np/solutions</field>
+		</record>
+
+		<record id = "gits_account_title" model = "ir.config_parameter">
+			<field name = "key">gits_account_title</field>
+			<field name = "value">My Online Account</field>
+		</record>
+
+		<record id = "gits_account_url" model = "ir.config_parameter">
+			<field name = "key">gits_account_url</field>
+			<field name = "value">http://www.greenit.com.np</field>
+		</record>
+	</data>
+</odoo>
+

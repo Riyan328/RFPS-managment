@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="dashboard_setting_customize" xml:space="preserve">
+    <t t-extend="DashboardMain">
+        <t t-jquery=".o_web_settings_dashboard" t-operation="replace">
+        	<div class="container-fluid o_web_settings_dashboard">
+                <div class="row">
+                   <div class="col-12 col-lg-4 o_web_settings_dashboard_col">
+                    	<div class="o_web_settings_dashboard_apps"></div>
+                	</div>
+               		<div class="col-12 col-lg-4 o_web_settings_dashboard_col">
+                    	<div class="o_web_settings_dashboard_invitations"></div>
+                	</div>
+                	<div class="col-12 col-lg-4 o_web_settings_dashboard_col">
+                    	<div class="o_web_settings_dashboard_company"></div>
+                	</div>
+            	</div>
+            </div>
+        </t>
+    </t>
+</templates>

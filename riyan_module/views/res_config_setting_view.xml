@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id = "view_customize_config_settings" model = "ir.ui.view">
+			<field name = "name">Odoo Debranding Settings</field>
+			<field name = "model">res.config.settings</field>
+			<field name = "priority">25</field>
+			<field name = "arch" type = "xml">
+				<form string = "Odoo Debranding Settings" class = "oe_form_configuration">
+					<header>
+						<button string = "Apply" type = "object" name = "execute" class = "oe_highlight"/>
+						<button string = "Cancel" type = "object" name = "cancel" class = "oe_link" special = "cancel"/>
+					</header>
+					<h2>Customization Settings</h2>
+					<group string = "System Name">
+						<label for = "gits_system_name"/>
+						<div>
+							<field name = "gits_system_name"/>
+							<div>
+								<a href = "http://www.greenit.com.np/" target = "_blank">Visit our website for more apps and support. http://www.greenit.com.np</a>
+							</div>
+						</div>
+					</group>
+					<group string = "User Menu">
+						<div class = "row mt16 o_settings_container" name = "user_menu_show_hide">
+							<div class = "col-12 col-lg-6 o_setting_box">
+								<div class = "col-12 col-lg-6 o_setting_box">
+									<div>
+										<field name = "gits_show_account"/>
+										<label for = "gits_show_account"/>
+									</div>
+									<div>
+										<field name = "gits_show_documentation"/>
+										<label for = "gits_show_documentation"/>
+									</div>
+								</div>
+							</div>
+							<div class = "col-12 col-lg-6 o_setting_box">
+								<div class = "col-12 col-lg-6 o_setting_box">
+									<div>
+										<field name = "gits_show_support"/>
+										<label for = "gits_show_support"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</group>
+					<group string = "User Menu Content">
+						<label for = "gits_documentation_url"/>
+						<div>
+							<field name = "gits_documentation_url"/>
+						</div>
+						<label for = "gits_support_url"/>
+						<div>
+							<field name ="gits_support_url"/>
+						</div>
+						<label for = "gits_account_title"/>
+						<div>
+							<field name = "gits_account_title"/>
+						</div>
+						<label for = "gits_account_url"/>
+						<div>
+							<field name = "gits_account_url"/>
+						</div>
+					</group>
+				</form>
+			</field>
+		</record>
+
+
+		<record id = "action_menu_customize_config" model = "ir.actions.act_window">
+			<field name = "name">Customize Brand</field>
+			<field name = "type">ir.actions.act_window</field>
+			<field name = "res_model">res.config.settings</field>
+			<field name = "view_mode">form</field>
+			<field name = "view_id" ref = "view_customize_config_settings"/>
+			<field name = "target">inline</field>
+		</record>
+
+
+		<menuitem
+			id = "menu_customize_model_group"
+			name = "GITS app"
+			action = "action_menu_customize_config"
+			parent = "base.menu_administration"
+			sequence = "40"
+			groups = "riyan_module.group_manager"
+		/>
+	</data>
+</odoo>

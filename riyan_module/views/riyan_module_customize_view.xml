@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+        <template id="assets_backend" name="riyan_module_customize assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/riyan_module/static/src/js/gits_window_title.js"></script>
+                <script type="text/javascript" src="/riyan_module/static/src/js/debrand_user_menu.js"></script>
+            </xpath>
+        </template>
+</odoo>
